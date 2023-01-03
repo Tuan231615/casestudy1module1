@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+
+}
+.nav {
+    background-color: coral;
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul li, a {
+    color: black;
+    font-size: 22px;
+}
+ul li:nth-child(2) input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+ul li:nth-child(2) {
+    position: relative;
+    width: 300px;
+}
+ul li:nth-child(2) i {
+    position: absolute;
+    right: 12px;
+    color: #333;
+    line-height: 30px;
+}
+ul li:nth-child(3) button{
+    height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+ul li:nth-child(3) button i {
+    margin-right: 6px;
+}
+ul li:nth-child(3) button:hover{
+    background-color: rgb(99,97,97);
+}
+ul li:nth-child(4){
+    text-align: center;
+}
+ul li:nth-child(4):hover a{
+    color: white;
+}
+ul li:nth-child(5):hover a{
+    color: white;
+}
+
+
+.menu-bar{
+    background-color: lightslategray;
+}
+.menu-bar ul{
+    display: flex;
+    justify-content: space-between;
+}
+.menu-bar ul li a {
+    color: white;
+    font-size: 20px;
+}
+.menu-bar ul li a i {
+    margin-right: 6px;
+    font-size: 16px;
+}
+.menu-bar > ul > li{
+    padding: 12px 6px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.menu-bar > ul > li:hover {
+    background-color: black;
+}
+.menu-bar > ul > li:nth-child(3)::before{
+    position: absolute;
+    content: "Giảm 99%";
+    display: block;
+    height: 25px;
+    width: 30px;
+    background-color: red;
+    border-radius: 5px;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    padding-left: 3px;
+    color: #ffffff;
+}
+.menu-bar ul li {
+    position: relative;
+
+}
+.submenu{
+    position: absolute;
+    background-color: lightslategrey;
+    width: 300px;
+    height: auto;
+    left: 10%;
+    top: 15%;
+    padding: 12px;
+    display: none;
+}
+.submenu ul{
+    display: flex;
+    flex-direction: column;
+}
+.submenu ul li {
+    padding: 6px 0;
+}
+.submenu ul li:hover a{
+    color: coral;
+}
+.submenu ul li:hover {
+    background: none;
+}
+.menu-bar ul li:hover .submenu {
+    display: block;
+}
+.slider{
+    padding: 20px 0;
+    height: 350px;
+}
+.slider{
+    display: flex;
+    justify-content: space-between;
+}
+.slider1{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.slider1 img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-item img {
+    padding-top: 80px;
+    width: 300px;
+    height: 309px;
+
+}
+.product-Items  {
+    width: 20%;
+    cursor: pointer;
+    display: flex;
+    padding-top: 80px;
+    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

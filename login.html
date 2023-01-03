@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-light-orange-clean-warm-background-image_218921.jpg");
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+    }
+
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+    }
+
+    form {
+        border: 1px solid #dadce0;
+        border-radius: 5px;
+        padding: 30px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    input {
+        height: 50px;
+        width: 300px;
+        outline: none;
+        border: 1px solid #dadce0;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: inherit;
+        color: #202124;
+        transition: all 0.3s ease-in-out;
+    }
+
+    label {
+        position: absolute;
+        padding: 0 5px;
+        left: 5px;
+        top: 50%;
+    / / thuoctínhsiêuvip pointer-events: none;
+        transform: translateY(-50%);
+        background: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-group input:focus {
+        border: 2px solid #1a73e8;
+    }
+
+    .form-group input:focus + label, .form-group input:valid + label {
+        top: 0;
+        font-size: 13px;
+        font-weight: 500;
+        color: #1a73e8;
+    }
+
+    input#btn-login {
+        background: #1a73e8;
+        color: #fff;
+    }
+</style>
+<body>
+<div id="wrapper">
+    <form action="">
+        <h3>Đăng Nhập</h3>
+        <div class="form-group">
+            <input type="text" name="email" id="user" required>
+            <label for="">Email</label>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" id="pass" required>
+            <label for="">Mật khẩu</label>
+        </div>
+        <input type="submit" value="Đăng nhập" id="btn-login">
+    </form>
+
+</div>
+<script>
+    function user() {
+        let username = "admin";
+        let password = "123";
+        let user = document.getElementById("userName");
+        let pass = document.getElementById("passWord");
+        if (user.value === username && pass.value === password) {
+            window.location.href = "display.html";
+            localStorage.setItem("username", "password");
+        } else {
+            document.getElementById("text").innerHTML = "Mật khẩu hoặc tài khoản sai!.Yêu cầu nhập đúng tài khoản và mật khẩu"
+        }
+    }
+    user()
+</script>
+</body>
+</html>
